@@ -48,7 +48,7 @@ endfunction " }}}
 function! stoneline#create_active_statusline() abort " {{{
   let use_minimal = g:stoneline.UseMinimalChecker()
   let s = ''
-  let s .= '%#' .. g:GetModeHighlightName(mode()) .. '#'
+  let s .= '%#' .. stoneline#get_mode_highlight_name(mode()) .. '#'
   let s .= ' %{g:stoneline.mode_title[mode(0)][' .. !use_minimal .. ']} '
   let s .= &modified ? '%#DiffAdd#' : '%#CursorLineNr#'
   let s .= mode(0) ==# 't' ? ' <terminal>' : ' %f'
