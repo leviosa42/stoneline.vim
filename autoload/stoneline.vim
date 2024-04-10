@@ -41,7 +41,7 @@ function! stoneline#get_mode_type(mode) abort " {{{
 endfunction " }}}
 
 function! stoneline#get_mode_highlight_name(mode) abort " {{{
-  let type = g:GetModeType(a:mode)
+  let type = stoneline#get_mode_type(a:mode)
   return 'StatusLine_' .. type
 endfunction " }}}
 
